@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import s from "./detail-panel.module.scss"
 import cn from "clsx"
 import Img from "../Img"
+import { useLenis } from "@studio-freight/react-lenis"
 
 type Props = {
   content?: any
@@ -10,11 +11,25 @@ type Props = {
 const DetailPanel = ({ content = null }: Props) => {
   const [active, setActive] = useState(false)
 
+  const lenis = useLenis((lenis: any) => {
+    // called every scroll
+
+    console.log(lenis)
+  })
+
   useEffect(() => {
     if (content !== null) {
       setActive(true)
     }
   }, [content])
+
+  useEffect(() => {
+    if (active) {
+      lenis.stop()
+    } else {
+      lenis.start()
+    }
+  }, [active])
 
   return (
     <div className={cn(s.detailPanel, { [s.active]: active })} onClick={() => setActive(false)}>
