@@ -1,0 +1,35 @@
+.figure {
+  width: 100%;
+  height: 100%;
+
+  background: #dedede;
+  overflow: hidden;
+  position: relative;
+
+  .img {
+    // @include dims(100%);
+    display: block;
+    // z-index: z-index("img");
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    max-width: 100%;
+
+    opacity: 0;
+
+    transition: 0.4s all ease;
+
+    &.visible {
+      opacity: 1;
+    }
+  }
+
+  .aspectRatio {
+    padding-top: calc(var(--height) / var(--width) * 100%);
+  }
+}

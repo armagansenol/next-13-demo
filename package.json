@@ -1,5 +1,5 @@
 {
-  "name": "layers-next-demo",
+  "name": "next-13-demo",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,14 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@studio-freight/react-lenis": "^0.0.19",
     "@types/node": "20.1.7",
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
+    "axios": "^1.4.0",
+    "clsx": "^1.2.1",
     "eslint": "8.40.0",
     "eslint-config-next": "13.4.2",
     "next": "13.4.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "typescript": "5.0.4"
+    "react-ratio": "^0.1.5",
+    "react-use": "^17.4.0",
+    "typescript": "5.0.4",
+    "vanilla-lazyload": "^17.8.3"
+  },
+  "devDependencies": {
+    "sass": "^1.62.1"
   }
 }
