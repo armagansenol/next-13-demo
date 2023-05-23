@@ -1,5 +1,3 @@
-"use client"
-
 import GridGallery from "@/components/grid-gallery"
 
 // async function fetchImg() {
@@ -81,19 +79,6 @@ export default async function Test() {
 
   return (
     <main>
-      {/* <div className={s.imgs}>
-        <>
-          {imgs &&
-            imgus.map((img: any, i: any) => {
-              return (
-                <div className={s.imgC} key={img.id}>
-                  <Img source={imgus[i].url} width={img.width} height={img.height} alt={img.alt_description ?? "img"} />
-                </div>
-              )
-            })}
-        </>
-      </div> */}
-
       <GridGallery contents={imgs} />
 
       {/* <GridGallery contents={imgus} /> */}

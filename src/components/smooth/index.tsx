@@ -8,6 +8,8 @@ type Props = {
 }
 
 const Smooth = ({ children }: Props) => {
+  const enabled = false
+
   const options = {
     duration: 1.4,
     easing: (t: any) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
@@ -15,10 +17,17 @@ const Smooth = ({ children }: Props) => {
     gestureOrientation: "vertical",
     smoothWheel: true,
   }
+
   return (
-    <ReactLenis root options={{ ...options }}>
-      {children}
-    </ReactLenis>
+    <>
+      {enabled ? (
+        <ReactLenis root options={{ ...options }}>
+          {children}
+        </ReactLenis>
+      ) : (
+        <div>{children}</div>
+      )}
+    </>
   )
 }
 

@@ -10,9 +10,10 @@ type Props = {
   width: number
   height: number
   alt: string
+  loading?: "eager" | "lazy"
 }
 
-const Img = ({ source = "#", alt = "Visual", width = 500, height = 500 }: Props) => {
+const Img = ({ source = "/#", alt = "Visual", width = 500, height = 500, loading = "lazy" }: Props) => {
   const [visible, setVisible] = useState(false)
 
   return (
@@ -20,7 +21,7 @@ const Img = ({ source = "#", alt = "Visual", width = 500, height = 500 }: Props)
       <div className={s.aspectRatio} style={{ "--height": height, "--width": width } as React.CSSProperties}></div>
       <Image
         className={cn(s.img, { [s.visible]: visible })}
-        loading="lazy"
+        loading={loading}
         src={source}
         alt={alt}
         width={width}
