@@ -1,14 +1,20 @@
 "use client"
 
 import { ReactLenis } from "@studio-freight/react-lenis"
-import React, { ReactElement } from "react"
+import React, { ReactElement, useEffect } from "react"
 
 type Props = {
   children?: ReactElement | any
 }
 
 const Smooth = ({ children }: Props) => {
-  const enabled = false
+  const enabled = true
+
+  useEffect(() => {
+    if (!enabled) return
+
+    window.history.scrollRestoration = "manual"
+  }, [enabled])
 
   const options = {
     duration: 1.4,

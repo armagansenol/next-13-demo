@@ -1,13 +1,13 @@
-@import './_reset.scss';
-@import './_fonts.scss';
-@import './_colors.scss';
-@import './_easings.scss';
-@import './_functions.scss';
-@import './_layout.scss';
-@import './_utils.scss';
-@import './_font-style.scss';
-@import './_themes.scss';
-@import './_scroll.scss';
+@import "./_reset.scss";
+@import "./_fonts.scss";
+@import "./_colors.scss";
+@import "./_easings.scss";
+@import "./_functions.scss";
+@import "./_layout.scss";
+@import "./_utils.scss";
+@import "./_font-style.scss";
+@import "./_themes.scss";
+@import "./_scroll.scss";
 
 :root {
   --header-height: #{mobile-vw(58px)};
@@ -61,6 +61,10 @@ select {
   cursor: pointer;
 }
 
+main {
+  padding-top: var(--header-height);
+}
+
 *::selection {
   background-color: var(--theme-secondary);
   color: var(--theme-primary);
@@ -86,7 +90,7 @@ svg.icon {
   transition: color 0.95s cubic-bezier(0.19, 1, 0.22, 1);
 
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
