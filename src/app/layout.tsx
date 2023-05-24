@@ -4,6 +4,7 @@ import { Inter } from "next/font/google"
 import "../styles/global.scss"
 import Smooth from "@/components/smooth"
 import PageTransition from "@/components/page-transition"
+import VelocityBar from "@/components/velocity-bar"
 
 const inter = Inter({ subsets: ["latin"] })
 

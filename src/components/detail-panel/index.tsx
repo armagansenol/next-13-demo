@@ -11,11 +11,7 @@ type Props = {
 const DetailPanel = ({ content = null }: Props) => {
   const [active, setActive] = useState(false)
 
-  const lenis = useLenis((lenis: any) => {
-    // called every scroll
-
-    console.log(lenis)
-  })
+  const lenis = useLenis()
 
   useEffect(() => {
     if (content !== null) {
