@@ -1,10 +1,8 @@
 import Header from "@/components/header"
-import { ReactLenis } from "@studio-freight/react-lenis"
-import { Inter } from "next/font/google"
-import "../styles/global.scss"
 import Smooth from "@/components/smooth"
-import PageTransition from "@/components/page-transition"
-import VelocityBar from "@/components/velocity-bar"
+import { Inter } from "next/font/google"
+import Head from "next/head"
+import "../styles/global.scss"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -16,6 +14,51 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <Head>
+        <meta charSet="UTF-8" />
+        <link
+          href="/fonts/NeueMontreal-Light.woff2"
+          as="font"
+          rel="preload prefetch"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="/fonts/NeueMontreal-Bold.woff2"
+          as="font"
+          rel="preload prefetch"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="/fonts/NeueMontreal-Regular.woff2"
+          as="font"
+          rel="preload prefetch"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="/fonts/GTAlpina-ThIt.woff2"
+          as="font"
+          rel="preload prefetch"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="/fonts/MessinaSansMono-Regular.woff2"
+          as="font"
+          rel="preload prefetch"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="/fonts/MessinaSansMono-SemiBold.woff2"
+          as="font"
+          rel="preload prefetch"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+      </Head>
       <body className={inter.className}>
         <Header />
         {/* <PageTransition></PageTransition> */}

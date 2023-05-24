@@ -21,9 +21,9 @@ const DetailPanel = ({ content = null }: Props) => {
 
   useEffect(() => {
     if (active) {
-      lenis.stop()
+      lenis?.stop()
     } else {
-      lenis.start()
+      lenis?.start()
     }
   }, [active])
 

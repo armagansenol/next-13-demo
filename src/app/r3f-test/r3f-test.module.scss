@@ -1,0 +1,28 @@
+.r3fTest {
+  background: #000;
+  color: #fff;
+  font-family: "Aften Screen", system, -apple-system, \.SFNSText-Regular, San Francisco, Roboto, Segoe UI,
+    Helvetica Neue, Lucida Grande, sans-serif;
+
+  a {
+    color: #fff;
+  }
+
+  article {
+    padding: 3vw 5vw 0;
+  }
+
+  section {
+    padding: 14vw 0 14vw;
+  }
+  h1 {
+    font-size: 5vw;
+    font-weight: 400;
+  }
+
+  p,
+  section.text {
+    max-width: 400px;
+    font-size: 16px;
+  }
+}

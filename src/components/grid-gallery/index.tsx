@@ -18,9 +18,9 @@ const GridGallery = ({ contents = [] }: Props) => {
     setCurrentContent(content)
   }
 
-  useEffect(() => {
-    console.log(currentContent)
-  }, [currentContent])
+  // useEffect(() => {
+  //   console.log(currentContent)
+  // }, [currentContent])
 
   // window.history.scrollRestoration = "manual"
 

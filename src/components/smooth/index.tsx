@@ -11,7 +11,7 @@ type Props = {
 }
 
 const Smooth = ({ children }: Props) => {
-  const enabled = true
+  const enabled = false
 
   const lenis = useLenis()
 

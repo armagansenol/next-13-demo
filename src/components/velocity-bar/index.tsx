@@ -16,9 +16,9 @@ const VelocityBar = (props: Props) => {
     // called every scroll
 
     // console.log(lenis)
-    setVel(gsap.utils.mapRange(0, 500, 1, 1.2, Math.abs(lenis.velocity)))
-    setScaleY(gsap.utils.mapRange(0, 500, 1, 0.3, Math.abs(lenis.velocity)))
-    setTY(gsap.utils.mapRange(0, 500, 0, 100, lenis.velocity))
+    setVel(gsap.utils.mapRange(0, 500, 1, 0.6, Math.abs(lenis.velocity)))
+    setScaleY(gsap.utils.mapRange(0, 500, 1, 0.1, Math.abs(lenis.velocity)))
+    setTY(gsap.utils.mapRange(0, 500, 0, 500, lenis.velocity))
   })
 
   useEffect(() => {
@@ -26,8 +26,10 @@ const VelocityBar = (props: Props) => {
   }, [vel])
 
   return (
-    <div className={s.velocityBar} style={{ transform: `scaleY(${vel}) scaleX(${scaleY}) translateY(${-tY}%)` }}>
-      velocity
+    <div className={s.velocityBar}>
+      <div className={s.bounce} style={{ transform: `scaleY(${vel}) scaleX(${scaleY}) translateY(${-tY}%) ` }}>
+        velocity
+      </div>
     </div>
   )
 }

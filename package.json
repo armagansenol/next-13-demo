@@ -9,6 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@14islands/lerp": "^1.0.3",
+    "@14islands/r3f-scroll-rig": "^8.11.1",
+    "@react-spring/three": "^9.7.2",
+    "@react-three/drei": "^9.68.6",
+    "@react-three/fiber": "^8.13.0",
     "@studio-freight/react-lenis": "^0.0.19",
     "@types/node": "20.1.7",
     "@types/react": "18.2.6",
@@ -24,6 +29,7 @@
     "react-dom": "18.2.0",
     "react-ratio": "^0.1.5",
     "react-use": "^17.4.0",
+    "three": "^0.152.2",
     "typescript": "5.0.4",
     "vanilla-lazyload": "^17.8.3"
   },

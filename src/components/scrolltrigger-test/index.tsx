@@ -23,6 +23,16 @@ const ScrollTriggerText = (props: Props) => {
         markers: true,
       },
     })
+
+    return () => {
+      ScrollTrigger.getAll().forEach((instance) => {
+        // console.log(instance)
+        instance.kill()
+      })
+
+      // This in case a scroll animation is active while the route is updated
+      gsap.killTweensOf(window)
+    }
   }, [])
 
   return (
