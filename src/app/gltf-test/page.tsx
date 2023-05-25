@@ -7,6 +7,7 @@ import { useThree } from "@react-three/fiber"
 import { Loader, Float, useGLTF, PresentationControls, Environment, Html } from "@react-three/drei"
 import { GlobalCanvas, ScrollScene, UseCanvas, SmoothScrollbar } from "@14islands/r3f-scroll-rig"
 import React from "react"
+import { PageWrapper } from "@/components/page-transition"
 
 // Need to start preloading assets to make sure Loader
 // is not removed before the canvas children mounts
@@ -22,52 +23,54 @@ const GltfTest = () => {
   }, [])
 
   return (
-    <main className={s.gltfTest}>
-      <div ref={eventSource}>
-        {/* Set eventSource so events works in both Html and Canvas */}
-        <GlobalCanvas
-          eventSource={eventSource}
-          eventPrefix="client"
-          scaleMultiplier={0.01}
-          camera={{ fov: 33 }}
-          style={{ pointerEvents: "none" }}
-        >
-          <ambientLight intensity={0.5} />
-          <spotLight position={[14, 14, 14]} angle={0.15} penumbra={1} shadow-mapSize={[512, 512]} castShadow />
-          <Environment preset="city" />
-          {/* Children from UseCanvas are automatically injected here */}
-        </GlobalCanvas>
+    <PageWrapper>
+      <main className={s.gltfTest}>
+        <div ref={eventSource}>
+          {/* Set eventSource so events works in both Html and Canvas */}
+          <GlobalCanvas
+            eventSource={eventSource}
+            eventPrefix="client"
+            scaleMultiplier={0.01}
+            camera={{ fov: 33 }}
+            style={{ pointerEvents: "none" }}
+          >
+            <ambientLight intensity={0.5} />
+            <spotLight position={[14, 14, 14]} angle={0.15} penumbra={1} shadow-mapSize={[512, 512]} castShadow />
+            <Environment preset="city" />
+            {/* Children from UseCanvas are automatically injected here */}
+          </GlobalCanvas>
 
-        <SmoothScrollbar>
-          {(bind: any) => (
-            <article {...bind}>
-              <header>
-                <a href="https://github.com/14islands/r3f-scroll-rig">@14islands/r3f-scroll-rig</a>
-              </header>
-              <section>
-                <h1>&lt;ScrollScene/&gt; example with 3D model</h1>
-              </section>
-              {isTouch && (
+          <SmoothScrollbar>
+            {(bind: any) => (
+              <article {...bind}>
+                <header>
+                  <a href="https://github.com/14islands/r3f-scroll-rig">@14islands/r3f-scroll-rig</a>
+                </header>
                 <section>
-                  <p style={{ color: "orange" }}>
-                    You are on a touch device which means the WebGL wont sync with the native scroll. Consider disabling
-                    ScrollScenes for touch devices, or experiment with the `smoothTouch` setting on Lenis.
-                  </p>
+                  <h1>&lt;ScrollScene/&gt; example with 3D model</h1>
                 </section>
-              )}
-              <WatchSection />
-              <section>
-                Original Watch demo is from <a href="https://github.com/pmndrs/drei">Drei</a> and created by{" "}
-                <a href="https://codesandbox.io/u/drcmda">Paul Henschel</a>
-              </section>
-              <WatchSection className="alternate" />
-            </article>
-          )}
-        </SmoothScrollbar>
+                {isTouch && (
+                  <section>
+                    <p style={{ color: "orange" }}>
+                      You are on a touch device which means the WebGL wont sync with the native scroll. Consider
+                      disabling ScrollScenes for touch devices, or experiment with the `smoothTouch` setting on Lenis.
+                    </p>
+                  </section>
+                )}
+                <WatchSection />
+                <section>
+                  Original Watch demo is from <a href="https://github.com/pmndrs/drei">Drei</a> and created by{" "}
+                  <a href="https://codesandbox.io/u/drcmda">Paul Henschel</a>
+                </section>
+                <WatchSection className="alternate" />
+              </article>
+            )}
+          </SmoothScrollbar>
 
-        <Loader />
-      </div>
-    </main>
+          <Loader />
+        </div>
+      </main>
+    </PageWrapper>
   )
 }
 

@@ -6,6 +6,7 @@ import React, { useEffect, useState } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/all"
 import useMeasure from "react-use-measure"
+import { PageWrapper } from "@/components/page-transition"
 gsap.registerPlugin(ScrollTrigger)
 
 const MeasureTest = () => {
@@ -44,37 +45,39 @@ const MeasureTest = () => {
   const [xy, setXY] = useState([0, 0])
 
   return (
-    <main className={s.measureTest}>
-      <div className={cn(s.section, s.one)}></div>
-      <div className={cn(s.section, s.two)}></div>
-      <div className={cn(s.section, s.three)}></div>
-      <div className={cn(s.section, s.four)}></div>
-      <div className={cn(s.section, s.five)}></div>
+    <PageWrapper>
+      <main className={s.measureTest}>
+        <div className={cn(s.section, s.one)}></div>
+        <div className={cn(s.section, s.two)}></div>
+        <div className={cn(s.section, s.three)}></div>
+        <div className={cn(s.section, s.four)}></div>
+        <div className={cn(s.section, s.five)}></div>
 
-      <div
-        className={s.box}
-        ref={ref}
-        data-box
-        onMouseEnter={() => setHover(true)}
-        onMouseLeave={() => setHover(false)}
-        onMouseMove={({ clientX, clientY }) => setXY([clientX, clientY])}
-        onClick={() => setBig(!big)}
-        style={{
-          transform: `translateY(${gsap.utils.mapRange(0, bounds.height, 0, 10, Math.round(xy[1] - bounds.top))}`,
-        }}
-      >
-        <p>x: {bounds.x}</p>
-        <p>y: {bounds.y}</p>
-        <p>width: {bounds.width}</p>
-        <p>height: {bounds.height}</p>
-        <p>top: {bounds.top}</p>
-        <p>left: {bounds.left}</p>
-        <p>right: {bounds.right}</p>
-        <p>bottom: {bounds.bottom}</p>
-        <p>mouse x: {Math.round(xy[0] - bounds.left)}px</p>
-        <p>mouse y: {Math.round(xy[1] - bounds.top)}px </p>
-      </div>
-    </main>
+        <div
+          className={s.box}
+          ref={ref}
+          data-box
+          onMouseEnter={() => setHover(true)}
+          onMouseLeave={() => setHover(false)}
+          onMouseMove={({ clientX, clientY }) => setXY([clientX, clientY])}
+          onClick={() => setBig(!big)}
+          style={{
+            transform: `translateY(${gsap.utils.mapRange(0, bounds.height, 0, 10, Math.round(xy[1] - bounds.top))}`,
+          }}
+        >
+          <p>x: {bounds.x}</p>
+          <p>y: {bounds.y}</p>
+          <p>width: {bounds.width}</p>
+          <p>height: {bounds.height}</p>
+          <p>top: {bounds.top}</p>
+          <p>left: {bounds.left}</p>
+          <p>right: {bounds.right}</p>
+          <p>bottom: {bounds.bottom}</p>
+          <p>mouse x: {Math.round(xy[0] - bounds.left)}px</p>
+          <p>mouse y: {Math.round(xy[1] - bounds.top)}px </p>
+        </div>
+      </main>
+    </PageWrapper>
   )
 }
 

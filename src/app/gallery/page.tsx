@@ -1,6 +1,7 @@
 import GridGallery from "@/components/grid-gallery"
 import s from "./gallery.module.scss"
 import ScrollTriggerText from "@/components/scrolltrigger-test"
+import { PageWrapper } from "@/components/page-transition"
 
 // async function fetchImg() {
 //   const res = await fetch("https://api.unsplash.com/photos/", {
@@ -80,14 +81,16 @@ export default async function Test() {
   // }, [])
 
   return (
-    <main>
-      <GridGallery contents={imgs} />
+    <PageWrapper>
+      <main>
+        <GridGallery contents={imgs} />
 
-      <ScrollTriggerText />
+        <ScrollTriggerText />
 
-      <GridGallery contents={imgs} />
+        <GridGallery contents={imgs} />
 
-      {/* <GridGallery contents={imgus} /> */}
-    </main>
+        {/* <GridGallery contents={imgus} /> */}
+      </main>
+    </PageWrapper>
   )
 }

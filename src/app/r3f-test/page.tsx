@@ -7,6 +7,7 @@ import { GlobalCanvas, ScrollScene, SmoothScrollbar, UseCanvas } from "@14island
 import { GradientTexture, MeshDistortMaterial } from "@react-three/drei"
 import { useFrame } from "@react-three/fiber"
 import { useEffect, useRef, useState } from "react"
+import { PageWrapper } from "@/components/page-transition"
 
 function ExampleComponent() {
   const el = useRef<any>(null)
@@ -76,32 +77,36 @@ const R3fTest = () => {
   }, [])
 
   return (
-    <main className={s.r3fTest}>
-      <GlobalCanvas style={{ pointerEvents: "none" }}>
-        <ambientLight />
-      </GlobalCanvas>
+    <PageWrapper>
+      <main className={s.r3fTest}>
+        <GlobalCanvas style={{ pointerEvents: "none" }}>
+          <ambientLight />
+        </GlobalCanvas>
 
-      <SmoothScrollbar>
-        {(bind: any) => (
-          <article {...bind}>
-            <section>
-              <h1>Basic &lt;ScrollScene/&gt; example</h1>
-            </section>
-            {isTouch && (
+        <SmoothScrollbar>
+          {(bind: any) => (
+            <article {...bind}>
               <section>
-                <p style={{ color: "orange" }}>
-                  You are on a touch device which means the WebGL wont sync with the native scroll. Consider disabling
-                  ScrollScenes for touch devices, or experiment with the `smoothTouch` setting on Lenis.
-                </p>
+                <h1>Basic &lt;ScrollScene/&gt; example</h1>
               </section>
-            )}
-            <ExampleComponent />
-            <section>Both these ScrollScenes are tracking DOM elements and scaling their WebGL meshes to fit.</section>
-            <SpinningBoxSection />
-          </article>
-        )}
-      </SmoothScrollbar>
-    </main>
+              {isTouch && (
+                <section>
+                  <p style={{ color: "orange" }}>
+                    You are on a touch device which means the WebGL wont sync with the native scroll. Consider disabling
+                    ScrollScenes for touch devices, or experiment with the `smoothTouch` setting on Lenis.
+                  </p>
+                </section>
+              )}
+              <ExampleComponent />
+              <section>
+                Both these ScrollScenes are tracking DOM elements and scaling their WebGL meshes to fit.
+              </section>
+              <SpinningBoxSection />
+            </article>
+          )}
+        </SmoothScrollbar>
+      </main>
+    </PageWrapper>
   )
 }
 

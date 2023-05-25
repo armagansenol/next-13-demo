@@ -61,7 +61,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </Head>
       <body className={inter.className}>
         <Header />
-        {/* <PageTransition></PageTransition> */}
         <Smooth>{children}</Smooth>
       </body>
     </html>
