@@ -8,52 +8,52 @@ const Home = (props: Props) => {
   return (
     <main>
       <Marquee repeat={5}>
-        <h1 className={s.marqueeInner}>HOMEPAGE</h1>
+        <h1 className={s.marqueeInner}>HOMEPAGE.</h1>
       </Marquee>
       <Marquee repeat={5}>
-        <h1 className={s.marqueeInner}>HOMEPAGE</h1>
+        <h1 className={s.marqueeInner}>HOMEPAGE.</h1>
       </Marquee>
       <Marquee repeat={5}>
-        <h1 className={s.marqueeInner}>HOMEPAGE</h1>
+        <h1 className={s.marqueeInner}>HOMEPAGE.</h1>
       </Marquee>
       <Marquee repeat={5}>
-        <h1 className={s.marqueeInner}>HOMEPAGE</h1>
+        <h1 className={s.marqueeInner}>HOMEPAGE.</h1>
       </Marquee>
       <Marquee repeat={5}>
-        <h1 className={s.marqueeInner}>HOMEPAGE</h1>
+        <h1 className={s.marqueeInner}>HOMEPAGE.</h1>
       </Marquee>
       <Marquee repeat={5}>
-        <h1 className={s.marqueeInner}>HOMEPAGE</h1>
+        <h1 className={s.marqueeInner}>HOMEPAGE.</h1>
       </Marquee>
       <Marquee repeat={5}>
-        <h1 className={s.marqueeInner}>HOMEPAGE</h1>
+        <h1 className={s.marqueeInner}>HOMEPAGE.</h1>
       </Marquee>
       <Marquee repeat={5}>
-        <h1 className={s.marqueeInner}>HOMEPAGE</h1>
+        <h1 className={s.marqueeInner}>HOMEPAGE.</h1>
       </Marquee>
       <Marquee repeat={5}>
-        <h1 className={s.marqueeInner}>HOMEPAGE</h1>
+        <h1 className={s.marqueeInner}>HOMEPAGE.</h1>
       </Marquee>
       <Marquee repeat={5}>
-        <h1 className={s.marqueeInner}>HOMEPAGE</h1>
+        <h1 className={s.marqueeInner}>HOMEPAGE.</h1>
       </Marquee>
       <Marquee repeat={5}>
-        <h1 className={s.marqueeInner}>HOMEPAGE</h1>
+        <h1 className={s.marqueeInner}>HOMEPAGE.</h1>
       </Marquee>
       <Marquee repeat={5}>
-        <h1 className={s.marqueeInner}>HOMEPAGE</h1>
+        <h1 className={s.marqueeInner}>HOMEPAGE.</h1>
       </Marquee>
       <Marquee repeat={5}>
-        <h1 className={s.marqueeInner}>HOMEPAGE</h1>
+        <h1 className={s.marqueeInner}>HOMEPAGE.</h1>
       </Marquee>
       <Marquee repeat={5}>
-        <h1 className={s.marqueeInner}>HOMEPAGE</h1>
+        <h1 className={s.marqueeInner}>HOMEPAGE.</h1>
       </Marquee>
       <Marquee repeat={5}>
-        <h1 className={s.marqueeInner}>HOMEPAGE</h1>
+        <h1 className={s.marqueeInner}>HOMEPAGE.</h1>
       </Marquee>
       <Marquee repeat={5}>
-        <h1 className={s.marqueeInner}>HOMEPAGE</h1>
+        <h1 className={s.marqueeInner}>HOMEPAGE.</h1>
       </Marquee>
     </main>
   )

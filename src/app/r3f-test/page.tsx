@@ -68,6 +68,8 @@ function SpinningBoxWebGL({ scale, scrollState }: any) {
 const R3fTest = () => {
   const [isTouch, setTouch] = useState(false)
 
+  const eventSource = useRef<any>(null)
+
   useEffect(() => {
     const isTouch = "ontouchstart" in window || navigator.maxTouchPoints > 0 || navigator.maxTouchPoints > 0
     setTouch(isTouch)
@@ -78,6 +80,7 @@ const R3fTest = () => {
       <GlobalCanvas style={{ pointerEvents: "none" }}>
         <ambientLight />
       </GlobalCanvas>
+
       <SmoothScrollbar>
         {(bind: any) => (
           <article {...bind}>

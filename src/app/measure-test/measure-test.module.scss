@@ -1,0 +1,45 @@
+.measureTest {
+  position: relative;
+
+  .section {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.one {
+      background: #000;
+    }
+
+    &.two {
+      background: blanchedalmond;
+    }
+
+    &.three {
+      background: gainsboro;
+    }
+
+    &.four {
+      background: palegreen;
+    }
+
+    &.five {
+      background: paleturquoise;
+    }
+  }
+
+  .box {
+    position: fixed;
+    top: 10vw;
+    left: 5vw;
+
+    height: 20rem;
+    width: 20rem;
+    background: orangered;
+    padding: 1rem;
+
+    font-size: 1.5rem;
+  }
+}

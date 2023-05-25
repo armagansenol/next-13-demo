@@ -8,6 +8,8 @@ const Header = () => {
       <Link href="/">home</Link>
       <Link href="gallery">gallery</Link>
       <Link href="r3f-test">r3f test</Link>
+      <Link href="gltf-test">gltf test</Link>
+      <Link href="measure-test">measure</Link>
     </header>
   )
 }
